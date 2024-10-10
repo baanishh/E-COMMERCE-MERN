@@ -33,7 +33,7 @@ async function userSignInController(req,res){
         const tokenOption = {
             httpOnly: true,        // Prevents client-side access to the cookie (security best practice)
             secure: true,          // Ensures the cookie is only sent over HTTPS (Render uses HTTPS)
-            sameSite: 'Strict',    // Controls cross-origin requests (set to 'Strict' or 'Lax' depending on your use case)
+            sameSite: 'None',    // Controls cross-origin requests (set to 'Strict' or 'Lax' depending on your use case)
             maxAge: 24 * 60 * 60 * 1000  // Set expiration for the cookie (e.g., 24 hours)
         };
 
